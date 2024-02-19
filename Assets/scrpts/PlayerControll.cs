@@ -8,6 +8,8 @@ public class PlayerControll : MonoBehaviour
     private Rigidbody rigidbody;
     public float rotationSpeed = 10f;
     public float speed = 2f;
+
+    public FixedJoystick fixedJoystick;
     
     // Start is called before the first frame update
     void Start()
@@ -17,10 +19,10 @@ public class PlayerControll : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal") + fixedJoystick.Horizontal;
+        float v = Input.GetAxis("Vertical") + fixedJoystick.Vertical;
 
         Vector3 directionVector = new Vector3(h, 0, v);
         if(directionVector.magnitude > Mathf.Abs(0.05f))
