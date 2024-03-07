@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class TankControll : MonoBehaviour
+//public class TankControll : MonoBehaviour
+public class TankControll : NetworkBehaviour
 {
 
     [SerializeField] private float speed = 20;
@@ -19,6 +21,8 @@ public class TankControll : MonoBehaviour
 
     void Update()
     {
+        if (IsOwner == false)
+            return;
 
         horizontalInput = Input.GetAxis("Horizontal");
         jumpInput = Input.GetAxis("Jump");
