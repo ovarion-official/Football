@@ -10,7 +10,7 @@ public class PlayerControll : NetworkBehaviour
     public float rotationSpeed = 10f;
     public float speed = 2f;
 
-    public FixedJoystick fixedJoystick;
+    //public FixedJoystick fixedJoystick;
 
 
     
@@ -26,8 +26,8 @@ public class PlayerControll : NetworkBehaviour
     {
         if (isOwned) 
         {
-            float h = Input.GetAxis("Horizontal") + fixedJoystick.Horizontal;
-            float v = Input.GetAxis("Vertical") + fixedJoystick.Vertical;
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
 
             Vector3 directionVector = new Vector3(h, 0, v);
             if(directionVector.magnitude > Mathf.Abs(0.05f))
