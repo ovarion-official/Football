@@ -5,8 +5,8 @@ using Mirror;
 
 public class PlayerControll : NetworkBehaviour
 {
-    private Animator animator;
-    private Rigidbody rigidbody;
+    public Animator animator;
+    public Rigidbody rb;
     public float rotationSpeed = 10f;
     public float speed = 2f;
 
@@ -18,7 +18,7 @@ public class PlayerControll : NetworkBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        rigidbody = GetComponent<Rigidbody>();    
+        rb = GetComponent<Rigidbody>();    
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class PlayerControll : NetworkBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(directionVector), Time.deltaTime * rotationSpeed);
 
             animator.SetFloat("speed", Vector3.ClampMagnitude(directionVector, 1).magnitude);
-            rigidbody.velocity = Vector3.ClampMagnitude(directionVector, 1) * speed;
+            rb.velocity = Vector3.ClampMagnitude(directionVector, 1) * speed;
         }
 
 
