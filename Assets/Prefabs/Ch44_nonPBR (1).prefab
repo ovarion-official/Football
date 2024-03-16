@@ -96,13 +96,13 @@ PrefabInstance:
       addedObject: {fileID: 6439360277986542043}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 236ac6ef1fcb8f242af95ae2dd1eab03, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8155801779848035515}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 236ac6ef1fcb8f242af95ae2dd1eab03, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3403971138378055339}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 236ac6ef1fcb8f242af95ae2dd1eab03, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9070852288186828006}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 236ac6ef1fcb8f242af95ae2dd1eab03, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1088737463397764020}
   m_SourcePrefab: {fileID: 100100000, guid: 236ac6ef1fcb8f242af95ae2dd1eab03, type: 3}
 --- !u!1 &197520687539925651 stripped
 GameObject:
@@ -247,41 +247,6 @@ MonoBehaviour:
   syncInterval: 0
   clientAuthority: 1
   animator: {fileID: 6851734787889443411}
---- !u!114 &8155801779848035515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197520687539925651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b20dc110904e47f8a154cdcf6433eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 1
-  syncMode: 0
-  syncInterval: 0
-  target: {fileID: 717880660666869801}
-  syncPosition: 1
-  syncRotation: 1
-  syncScale: 0
-  onlySyncOnChange: 1
-  compressRotation: 1
-  interpolatePosition: 1
-  interpolateRotation: 1
-  interpolateScale: 1
-  coordinateSpace: 0
-  sendIntervalMultiplier: 1
-  timelineOffset: 0
-  showGizmos: 0
-  showOverlay: 0
-  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
-  bufferResetMultiplier: 3
-  changedDetection: 1
-  positionSensitivity: 0.01
-  rotationSensitivity: 0.01
-  scaleSensitivity: 0.01
 --- !u!65 &3403971138378055339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -318,6 +283,41 @@ MonoBehaviour:
   speed: 20
   variableJoystick: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
   rb: {fileID: 3519270738439616478}
+--- !u!114 &1088737463397764020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197520687539925651}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b20dc110904e47f8a154cdcf6433eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 717880660666869801}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  bufferResetMultiplier: 3
+  changedDetection: 1
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
 --- !u!4 &717880660666869801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 236ac6ef1fcb8f242af95ae2dd1eab03, type: 3}
